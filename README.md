@@ -1,2 +1,1 @@
-# farcry2.github.io
-Simple site for FC2
+Simple website for far cry 2

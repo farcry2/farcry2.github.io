@@ -1,0 +1,746 @@
+@font-face{
+    font-family: farcryff;
+    src: url("res/fonts/FARCEB__.TTF");
+}
+@font-face{
+    font-family: arcaMajora;
+    src: url("res/fonts/ArcaMajora3.otf");
+}
+@font-face{
+    font-family: arciform;
+    src: url("res/fonts/Arciform.otf");
+}
+@font-face{
+    font-family: openSans;
+    src: url("res/fonts/OpenSans-Regular.ttf");
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background: #ffc3c3;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ffadad;
+    border-radius: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    //border: 1px solid;
+}
+
+body{
+    background: #fff0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.navTrigger{
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 60px;   
+    }
+    #btnOpen{
+        transition-property: opacity;
+        transition-duration: 300ms;
+        opacity: 100%;
+        z-index: 1;
+    }
+    #btnClose{
+        z-index: -1;
+        transition-property: opacity;
+        transition-duration: 300ms;
+        opacity: 0%;
+    }
+}
+.hamBurgerNav{
+    position: fixed;
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #fff6f6c4;
+    padding-bottom: 2rem;
+    transform: translateY(-500px);
+    transition-property: transform;
+    transition-duration: 280ms;
+    z-index: 100;
+    .navBtnContainer{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-top: 2rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+        a{
+            text-decoration: none;
+            color: #000000;
+            font-family: arcaMajora;
+            margin-top: 1rem;
+            padding-top: .2rem;
+            padding-bottom: .2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            border-radius: 100px;
+            font-size: 1.4rem;
+            transition-property: box-shadow, background, color;
+            transition-duration: 280ms;
+        }
+        a:focus,
+        a:hover{
+        background: #ff7b7b;
+        color: #FFFFFF;
+        box-shadow: 0px 5px 20px #0000003f;
+    }
+    }
+}
+
+.nav{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: #FFF0F0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 69;
+    transition-property: box-shadow;
+    transition-duration: 280ms;
+    h1{
+        padding-left: 3rem;
+        font-family: farcryff;
+        letter-spacing: .5rem;
+        border-radius: 0px 20px 20px 0px;
+        transition-property: box-shadow, background, color;
+        transition-duration: 280ms;
+    }
+    h1:focus,
+    h1:hover{
+        background: #ff7b7b;
+        color: white;
+        box-shadow: 0px 5px 20px #0000003f;
+    }
+    .navBtn{
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        text-decoration: none;
+        color: #494949;
+        font-family: arcaMajora;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        transition-property: box-shadow, background, color;
+        transition-duration: 280ms;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+    }
+    .navBtn:focus,
+    .navBtn:hover{
+        background: #ff7b7b;
+        color: #FFFFFF;
+        box-shadow: 0px 5px 20px #0000003f;
+    }
+}
+.nav:focus,
+.nav:hover{
+    box-shadow: 0px 5px 10px #251e1e2c;
+}
+.bgColor0{
+    background: #f0e0ff;
+}
+.bgColor1{
+    background: #ffe0e0;
+    z-index: 10;
+}
+.bgColor2{
+    background: #ffeada;
+    z-index: 9;
+}
+.bgColor3{
+    z-index: 7;
+    background: #dadfff;
+}
+.bgColor4{
+    z-index: 6;
+    background: #ffdbdd;
+}
+.bgColor5{
+    z-index: 5;
+    background: #ffe8db;
+}
+.bgColor6{
+    z-index: 8;
+    background: #c7fff1;
+}
+
+.landingPage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    h1{
+        font-family: farcryff;
+        letter-spacing: .5rem;
+        font-size: 5rem;
+        color: #ff5b5b;
+    }
+    .subContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: min-content;
+        padding-top: 1rem;
+
+        p{
+            
+            font-family: arcaMajora;
+            font-size: 1.5rem;
+            color: #494949;
+            margin-right: 3.5rem;
+        }
+        .downloadGame{
+            border-radius: 20px;
+            border: 3px solid;
+            border-color: linear-gradient(to right,#ff5b5b,#ff2e5c);
+            outline: none;
+            height: 2.5rem;
+            width: 10rem;
+            background: transparent;
+            color: #ff5b5b;
+            padding-top: .2rem;
+            font-family: arcaMajora;
+            font-size: 1rem;
+            letter-spacing: .02rem;
+            transition-property: border-color, background, color, box-shadow;
+            transition-duration: 280ms;
+
+    
+        }
+        .downloadGame:focus,
+        .downloadGame:hover{
+            background: #ff5b5b;
+            border-color: transparent;
+            color: white;
+            box-shadow: 0px 5px 20px #0000003f;
+        }
+    }
+    .bgland{
+        width: 60vh;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        
+        opacity: 20%;
+        z-index: -1;
+    }
+}
+.ak47{
+    position: absolute;
+    width: 30vh;
+    opacity: 30%;
+    transform: rotate(-30deg);
+    right:10%;
+    top: 55%;
+    bottom: 50%;
+    
+}
+.m16a4{
+    position: absolute;
+    width: 30vh;
+    opacity: 30%;
+    transform: scaleX(-1);
+    right:10%;
+    top: 0;
+}
+
+.rpg7{
+    position: absolute;
+    width: 30vh;
+    opacity: 50%;
+    transform: rotate(30deg);
+    right:10%;
+    top: 0;  
+}
+.discord{
+    position: absolute;
+    width: 20vh;
+    opacity: 20%;
+    right: 5%;
+    bottom: 10%;
+}
+.youtube{
+    position: absolute;
+    width: 20vh;
+    opacity: 10%;
+    right: 5%;
+    bottom: -10%;
+    transform: rotate(-10deg);
+}
+.people{
+    position: absolute;
+    width: 20vh;
+    opacity: 10%;
+    right: 0%;
+    top: -10%;
+    //bottom: -10%;
+}
+.rFirst,.connect{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    box-shadow: 0px 3px 10px #0000001c;
+    .readContainer{
+        width: 90%;
+        max-width: 1000px;
+        position: relative;
+        h1{
+            font-family: farcryff;
+            text-transform: uppercase;
+            font-size: 3rem;
+            letter-spacing: .15rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 1rem;
+            font-family: openSans;
+            margin-bottom: 1rem;
+            line-height: 1.6rem;
+            word-spacing: .4rem;
+            letter-spacing: .1rem;
+            span{
+                font-size: 1.5rem;
+            }
+        }
+        .subHead{
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-family: farcryff;
+            letter-spacing: .4rem;
+            margin-bottom: .5rem;
+        }
+        .topSpacing{
+            margin-top: 1rem;
+        }
+        .specialP{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-family: arcaMajora;
+            color: #000000;
+        }
+        .specialP2{
+            margin-top: 0rem;
+            margin-bottom: .5rem;
+            font-size: 1.2rem;
+            font-family: arcaMajora;
+            line-height: 2rem;
+            word-spacing: .5rem;
+            color: #3d3d3d;
+        }
+        .btnContainer{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .roundedContainer{
+            text-decoration: none;
+            border: .15rem solid #ff7a7a;
+            border-radius: 50px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            margin-right: .5rem;
+            
+            font-family: arcaMajora;
+            color: #ff4e4e;
+            background: transparent;
+            transition-property: border-color, color, background;
+            transition-duration: 500ms;
+        }
+        .roundedContainer:hover,
+        .roundedContainer:focus{
+            border-color: transparent;
+            color: white;
+            background: #ec5656;
+        }
+
+
+    }
+    .smallCardContainer{
+        margin-top: 2rem;
+        display: grid;
+        width: 100%;
+        max-width: 1000px;
+        grid-template-columns: repeat(auto-fit,minmax(200px,210px));
+        gap: 2rem;
+        align-items: center;
+        justify-items: center;
+        place-content: center;
+        .scard{
+            width: 200px;
+            height: 250px;
+            color: transparent;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            background: #7bffde;
+            color: #1a5042;
+            transition-property: box-shadow;
+            transition-duration: 280ms;
+        
+            .sCardHead{
+                text-align: center;
+                font-size: 1.8rem;
+                font-family: arcaMajora;
+                
+                text-transform: uppercase;
+                line-height: 2.5rem;
+                z-index: 1;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .scard:focus,
+        .scard:hover{
+            box-shadow: 0px 15px 25px #0000003d;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cardSection{
+    //background: red;
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,300px));
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    .card{
+        
+        height: 380px;
+        width: 280px;
+        border-radius: 10px;
+        
+        background: #c6ceff;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        transition-property: box-shadow;
+        transition-duration: 280ms;
+        .cardImage{
+            height: 150px;
+            width: min-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            //background: red;
+            img{
+                height: 70%;
+                width: auto;
+                
+            }
+            
+        }
+        .desc{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            text-align: center;
+            h1{
+                font-size: 2rem;
+                font-family: arcaMajora;
+                margin-bottom: 1rem;
+            }
+            p{
+                padding-left: 1rem;
+                padding-right: 1rem;
+                font-family: arciform;
+                letter-spacing: .1rem;
+                line-height: 1.5rem;
+                color: #525252;
+            }
+        }
+        .buttonLayout{
+            padding-top: 1rem;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            a{
+                text-decoration: none;
+                border: .15rem solid #6b81ff;
+                border-radius: 50px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                font-family: arcaMajora;
+                color: #6b81ff;
+                letter-spacing: .15rem;
+                background: transparent;
+                transition-property: border-color, color, background;
+                transition-duration: 500ms;
+
+            }
+            a:hover,
+            a:focus{
+                border-color: transparent;
+                color: white;
+                background: #6b81ff;
+            }
+        }
+    }
+    .card:hover,
+    .card:focus{
+        box-shadow: 0px 10px 15px #0000002c;
+    }
+
+}
+
+.circleCard{
+    background: #ffb7bb;
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 200px;
+    transition-property: box-shadow;
+    transition-duration: 280ms;
+    .logo{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 50%;
+            height: auto;
+            opacity: 40%;
+        }
+    }
+    h1{
+        font-family: arcaMajora;
+        color: #444444;
+        letter-spacing: .11rem;
+    }
+}
+.circleCard:focus,
+.circleCard:hover{
+    box-shadow: 5px 6px 20px #00000042,
+                -5px -6px 20px #ffffffd8,
+                inset 5px 5px 5px #ffd5dbea;
+}
+.circleCardContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,230px));
+    width: 100%;
+    gap: 5rem;
+    place-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:550px){
+    .hamBurgerNav{
+        display: flex;
+    }
+    .navTrigger{
+        display: block;
+        top: 2%;
+        right: 2%;
+    }
+    .nav{
+        display: none;
+    }
+    .landingPage{
+        h1{
+            font-size: 3rem;
+        }
+        .subContainer{
+            
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            p{
+                text-align: center;
+                width: 100%;
+                font-size: 1.2rem;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+            .downloadGame{
+                border-width: 2px;
+                font-size: 1rem;
+                height: 2.5rem;
+                width: 170px;
+            }
+        }
+        .bgland{
+            width: 95%;
+        }
+    }
+
+    .rFirst, .connect{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        .readContainer{
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                font-size: .8rem;
+                word-spacing: .2rem;
+                letter-spacing: 0rem;
+                line-height: 1.5rem;
+                span{
+                    font-size: 1rem;
+                    font-weight: 800;
+                }
+            }
+            .specialP2{
+                font-size: 1.1rem;
+                letter-spacing: .02rem;
+            }
+            .subHead{
+                font-size: 1.4rem;
+            }
+            .roundedContainer{
+                padding-left: .8rem;
+                padding-right: .8rem;
+                padding-top: .35rem;
+                padding-bottom: .3rem;
+                margin-right: .5rem;
+                border-width: .13rem;
+                font-size: 1rem;
+                transition-duration: 200ms;
+            }
+        }
+    }
+
+    .cardSection{
+        .card{
+            .cardImage{
+
+            }
+            .desc{
+                h1{
+                    line-height: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    line-height: 1.5rem;
+                }
+            }
+            .buttonLayout{
+
+            }
+        }
+    }
+
+
+    .ak47{
+        width: 20vh;
+        right:5%;
+        top: 55%;
+        bottom: 50%;
+        
+    }
+    .m16a4{
+        width: 20vh;
+        right:5%;
+        top: .5%;
+    }
+    .discord{
+        width: 10vh;
+        right: 0%;
+        bottom: 40%;
+    }
+    .youtube{
+        width: 10vh;
+        right: 5%;
+        bottom: 60%;
+    }
+    .people{
+        width: 10vh;
+        right: 5%;
+        top: -10%;
+    }
+}

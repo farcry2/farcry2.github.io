@@ -1,0 +1,937 @@
+@font-face {
+  font-family: farcryff;
+  src: url("res/fonts/FARCEB__.TTF");
+}
+
+@font-face {
+  font-family: arcaMajora;
+  src: url("res/fonts/ArcaMajora3.otf");
+}
+
+@font-face {
+  font-family: arciform;
+  src: url("res/fonts/Arciform.otf");
+}
+
+@font-face {
+  font-family: openSans;
+  src: url("res/fonts/OpenSans-Regular.ttf");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffc3c3;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffadad;
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.navTrigger {
+  display: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navTrigger img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+}
+
+.navTrigger #btnOpen {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  opacity: 100%;
+  z-index: 1;
+}
+
+.navTrigger #btnClose {
+  z-index: -1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  opacity: 0%;
+}
+
+.hamBurgerNav {
+  position: fixed;
+  width: 100%;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff6f6c4;
+  padding-bottom: 2rem;
+  -webkit-transform: translateY(-500px);
+          transform: translateY(-500px);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+  z-index: 100;
+}
+
+.hamBurgerNav .navBtnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.hamBurgerNav .navBtnContainer a {
+  text-decoration: none;
+  color: #000000;
+  font-family: arcaMajora;
+  margin-top: 1rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 100px;
+  font-size: 1.4rem;
+  -webkit-transition-property: background, color, -webkit-box-shadow;
+  transition-property: background, color, -webkit-box-shadow;
+  transition-property: box-shadow, background, color;
+  transition-property: box-shadow, background, color, -webkit-box-shadow;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+}
+
+.hamBurgerNav .navBtnContainer a:focus,
+.hamBurgerNav .navBtnContainer a:hover {
+  background: #ff7b7b;
+  color: #FFFFFF;
+  -webkit-box-shadow: 0px 5px 20px #0000003f;
+          box-shadow: 0px 5px 20px #0000003f;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background: #FFF0F0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 69;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+}
+
+.nav h1 {
+  padding-left: 3rem;
+  font-family: farcryff;
+  letter-spacing: .5rem;
+  border-radius: 0px 20px 20px 0px;
+  -webkit-transition-property: background, color, -webkit-box-shadow;
+  transition-property: background, color, -webkit-box-shadow;
+  transition-property: box-shadow, background, color;
+  transition-property: box-shadow, background, color, -webkit-box-shadow;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+}
+
+.nav h1:focus,
+.nav h1:hover {
+  background: #ff7b7b;
+  color: white;
+  -webkit-box-shadow: 0px 5px 20px #0000003f;
+          box-shadow: 0px 5px 20px #0000003f;
+}
+
+.nav .navBtn {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  text-decoration: none;
+  color: #494949;
+  font-family: arcaMajora;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  -webkit-transition-property: background, color, -webkit-box-shadow;
+  transition-property: background, color, -webkit-box-shadow;
+  transition-property: box-shadow, background, color;
+  transition-property: box-shadow, background, color, -webkit-box-shadow;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+.nav .navBtn:focus,
+.nav .navBtn:hover {
+  background: #ff7b7b;
+  color: #FFFFFF;
+  -webkit-box-shadow: 0px 5px 20px #0000003f;
+          box-shadow: 0px 5px 20px #0000003f;
+}
+
+.nav:focus,
+.nav:hover {
+  -webkit-box-shadow: 0px 5px 10px #251e1e2c;
+          box-shadow: 0px 5px 10px #251e1e2c;
+}
+
+.bgColor0 {
+  background: #f0e0ff;
+}
+
+.bgColor1 {
+  background: #ffe0e0;
+  z-index: 10;
+}
+
+.bgColor2 {
+  background: #ffeada;
+  z-index: 9;
+}
+
+.bgColor3 {
+  z-index: 7;
+  background: #dadfff;
+}
+
+.bgColor4 {
+  z-index: 6;
+  background: #ffdbdd;
+}
+
+.bgColor5 {
+  z-index: 5;
+  background: #ffe8db;
+}
+
+.bgColor6 {
+  z-index: 8;
+  background: #c7fff1;
+}
+
+.landingPage {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.landingPage h1 {
+  font-family: farcryff;
+  letter-spacing: .5rem;
+  font-size: 5rem;
+  color: #ff5b5b;
+}
+
+.landingPage .subContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding-top: 1rem;
+}
+
+.landingPage .subContainer p {
+  font-family: arcaMajora;
+  font-size: 1.5rem;
+  color: #494949;
+  margin-right: 3.5rem;
+}
+
+.landingPage .subContainer .downloadGame {
+  border-radius: 20px;
+  border: 3px solid;
+  border-color: linear-gradient(to right, #ff5b5b, #ff2e5c);
+  outline: none;
+  height: 2.5rem;
+  width: 10rem;
+  background: transparent;
+  color: #ff5b5b;
+  padding-top: .2rem;
+  font-family: arcaMajora;
+  font-size: 1rem;
+  letter-spacing: .02rem;
+  -webkit-transition-property: border-color, background, color, -webkit-box-shadow;
+  transition-property: border-color, background, color, -webkit-box-shadow;
+  transition-property: border-color, background, color, box-shadow;
+  transition-property: border-color, background, color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+}
+
+.landingPage .subContainer .downloadGame:focus,
+.landingPage .subContainer .downloadGame:hover {
+  background: #ff5b5b;
+  border-color: transparent;
+  color: white;
+  -webkit-box-shadow: 0px 5px 20px #0000003f;
+          box-shadow: 0px 5px 20px #0000003f;
+}
+
+.landingPage .bgland {
+  width: 60vh;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  opacity: 20%;
+  z-index: -1;
+}
+
+.ak47 {
+  position: absolute;
+  width: 30vh;
+  opacity: 30%;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  right: 10%;
+  top: 55%;
+  bottom: 50%;
+}
+
+.m16a4 {
+  position: absolute;
+  width: 30vh;
+  opacity: 30%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  right: 10%;
+  top: 0;
+}
+
+.rpg7 {
+  position: absolute;
+  width: 30vh;
+  opacity: 50%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  right: 10%;
+  top: 0;
+}
+
+.discord {
+  position: absolute;
+  width: 20vh;
+  opacity: 20%;
+  right: 5%;
+  bottom: 10%;
+}
+
+.youtube {
+  position: absolute;
+  width: 20vh;
+  opacity: 10%;
+  right: 5%;
+  bottom: -10%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.people {
+  position: absolute;
+  width: 20vh;
+  opacity: 10%;
+  right: 0%;
+  top: -10%;
+}
+
+.rFirst, .connect {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  -webkit-box-shadow: 0px 3px 10px #0000001c;
+          box-shadow: 0px 3px 10px #0000001c;
+}
+
+.rFirst .readContainer, .connect .readContainer {
+  width: 90%;
+  max-width: 1000px;
+  position: relative;
+}
+
+.rFirst .readContainer h1, .connect .readContainer h1 {
+  font-family: farcryff;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: .15rem;
+  margin-bottom: 1rem;
+}
+
+.rFirst .readContainer p, .connect .readContainer p {
+  font-size: 1rem;
+  font-family: openSans;
+  margin-bottom: 1rem;
+  line-height: 1.6rem;
+  word-spacing: .4rem;
+  letter-spacing: .1rem;
+}
+
+.rFirst .readContainer p span, .connect .readContainer p span {
+  font-size: 1.5rem;
+}
+
+.rFirst .readContainer .subHead, .connect .readContainer .subHead {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: farcryff;
+  letter-spacing: .4rem;
+  margin-bottom: .5rem;
+}
+
+.rFirst .readContainer .topSpacing, .connect .readContainer .topSpacing {
+  margin-top: 1rem;
+}
+
+.rFirst .readContainer .specialP, .connect .readContainer .specialP {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: arcaMajora;
+  color: #000000;
+}
+
+.rFirst .readContainer .specialP2, .connect .readContainer .specialP2 {
+  margin-top: 0rem;
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  font-family: arcaMajora;
+  line-height: 2rem;
+  word-spacing: .5rem;
+  color: #3d3d3d;
+}
+
+.rFirst .readContainer .btnContainer, .connect .readContainer .btnContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rFirst .readContainer .roundedContainer, .connect .readContainer .roundedContainer {
+  text-decoration: none;
+  border: .15rem solid #ff7a7a;
+  border-radius: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-right: .5rem;
+  font-family: arcaMajora;
+  color: #ff4e4e;
+  background: transparent;
+  -webkit-transition-property: border-color, color, background;
+  transition-property: border-color, color, background;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.rFirst .readContainer .roundedContainer:hover,
+.rFirst .readContainer .roundedContainer:focus, .connect .readContainer .roundedContainer:hover,
+.connect .readContainer .roundedContainer:focus {
+  border-color: transparent;
+  color: white;
+  background: #ec5656;
+}
+
+.rFirst .smallCardContainer, .connect .smallCardContainer {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  max-width: 1000px;
+  -ms-grid-columns: (minmax(200px, 210px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 210px));
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  place-content: center;
+}
+
+.rFirst .smallCardContainer .scard, .connect .smallCardContainer .scard {
+  width: 200px;
+  height: 250px;
+  color: transparent;
+  border-radius: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #7bffde;
+  color: #1a5042;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+}
+
+.rFirst .smallCardContainer .scard .sCardHead, .connect .smallCardContainer .scard .sCardHead {
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: arcaMajora;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.rFirst .smallCardContainer .scard:focus,
+.rFirst .smallCardContainer .scard:hover, .connect .smallCardContainer .scard:focus,
+.connect .smallCardContainer .scard:hover {
+  -webkit-box-shadow: 0px 15px 25px #0000003d;
+          box-shadow: 0px 15px 25px #0000003d;
+}
+
+.cardSection {
+  width: 100%;
+  max-width: 1000px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 300px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardSection .card {
+  height: 380px;
+  width: 280px;
+  border-radius: 10px;
+  background: #c6ceff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+}
+
+.cardSection .card .cardImage {
+  height: 150px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardSection .card .cardImage img {
+  height: 70%;
+  width: auto;
+}
+
+.cardSection .card .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.cardSection .card .desc h1 {
+  font-size: 2rem;
+  font-family: arcaMajora;
+  margin-bottom: 1rem;
+}
+
+.cardSection .card .desc p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: arciform;
+  letter-spacing: .1rem;
+  line-height: 1.5rem;
+  color: #525252;
+}
+
+.cardSection .card .buttonLayout {
+  padding-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardSection .card .buttonLayout a {
+  text-decoration: none;
+  border: .15rem solid #6b81ff;
+  border-radius: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-family: arcaMajora;
+  color: #6b81ff;
+  letter-spacing: .15rem;
+  background: transparent;
+  -webkit-transition-property: border-color, color, background;
+  transition-property: border-color, color, background;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.cardSection .card .buttonLayout a:hover,
+.cardSection .card .buttonLayout a:focus {
+  border-color: transparent;
+  color: white;
+  background: #6b81ff;
+}
+
+.cardSection .card:hover,
+.cardSection .card:focus {
+  -webkit-box-shadow: 0px 10px 15px #0000002c;
+          box-shadow: 0px 10px 15px #0000002c;
+}
+
+.circleCard {
+  background: #ffb7bb;
+  width: 200px;
+  height: 200px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 200px;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 280ms;
+          transition-duration: 280ms;
+}
+
+.circleCard .logo {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.circleCard .logo img {
+  width: 50%;
+  height: auto;
+  opacity: 40%;
+}
+
+.circleCard h1 {
+  font-family: arcaMajora;
+  color: #444444;
+  letter-spacing: .11rem;
+}
+
+.circleCard:focus,
+.circleCard:hover {
+  -webkit-box-shadow: 5px 6px 20px #00000042, -5px -6px 20px #ffffffd8, inset 5px 5px 5px #ffd5dbea;
+          box-shadow: 5px 6px 20px #00000042, -5px -6px 20px #ffffffd8, inset 5px 5px 5px #ffd5dbea;
+}
+
+.circleCardContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 230px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 230px));
+  width: 100%;
+  gap: 5rem;
+  place-content: center;
+}
+
+@media (max-width: 550px) {
+  .hamBurgerNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navTrigger {
+    display: block;
+    top: 2%;
+    right: 2%;
+  }
+  .nav {
+    display: none;
+  }
+  .landingPage h1 {
+    font-size: 3rem;
+  }
+  .landingPage .subContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landingPage .subContainer p {
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  .landingPage .subContainer .downloadGame {
+    border-width: 2px;
+    font-size: 1rem;
+    height: 2.5rem;
+    width: 170px;
+  }
+  .landingPage .bgland {
+    width: 95%;
+  }
+  .rFirst, .connect {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .rFirst .readContainer h1, .connect .readContainer h1 {
+    font-size: 2rem;
+  }
+  .rFirst .readContainer p, .connect .readContainer p {
+    font-size: .8rem;
+    word-spacing: .2rem;
+    letter-spacing: 0rem;
+    line-height: 1.5rem;
+  }
+  .rFirst .readContainer p span, .connect .readContainer p span {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .rFirst .readContainer .specialP2, .connect .readContainer .specialP2 {
+    font-size: 1.1rem;
+    letter-spacing: .02rem;
+  }
+  .rFirst .readContainer .subHead, .connect .readContainer .subHead {
+    font-size: 1.4rem;
+  }
+  .rFirst .readContainer .roundedContainer, .connect .readContainer .roundedContainer {
+    padding-left: .8rem;
+    padding-right: .8rem;
+    padding-top: .35rem;
+    padding-bottom: .3rem;
+    margin-right: .5rem;
+    border-width: .13rem;
+    font-size: 1rem;
+    -webkit-transition-duration: 200ms;
+            transition-duration: 200ms;
+  }
+  .cardSection .card .desc h1 {
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .cardSection .card .desc p {
+    line-height: 1.5rem;
+  }
+  .ak47 {
+    width: 20vh;
+    right: 5%;
+    top: 55%;
+    bottom: 50%;
+  }
+  .m16a4 {
+    width: 20vh;
+    right: 5%;
+    top: .5%;
+  }
+  .discord {
+    width: 10vh;
+    right: 0%;
+    bottom: 40%;
+  }
+  .youtube {
+    width: 10vh;
+    right: 5%;
+    bottom: 60%;
+  }
+  .people {
+    width: 10vh;
+    right: 5%;
+    top: -10%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

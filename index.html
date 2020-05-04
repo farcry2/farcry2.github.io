@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farcry 2 FTW</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="nav.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <h1>l</h1>
+        <div class="navBtnContainer">
+            <a href="#cHome" class="navBtn">Home</a>
+            <a href="#cMpPatch" class="navBtn">MP Patch</a>
+            <a href="#cFixes" class="navBtn">Fixes</a>
+            <a href="#cArchives" class="navBtn">Archives</a>
+            <a href="#cContact" class="navBtn">Contact</a>
+        </div>
+    </div>
+    <div class="navTrigger">
+        <img onclick="navOn()" id="btnOpen" src="res/images/nav.png" alt="Navigation Button On">
+        <img onclick="navOff()" id="btnClose" src="res/images/navClose.png" alt="Navigation Button Off">
+    </div>
+    <div id="hBNav" class="hamBurgerNav">
+        <div class="navBtnContainer">
+            <a onclick="navOff()" href="#cHome" class="navBtn">Home</a>
+            <a onclick="navOff()" href="#cMpPatch" class="navBtn">MP Patch</a>
+            <a onclick="navOff()" href="#cFixes" class="navBtn">Fixes</a>
+            <a onclick="navOff()" href="#cArchives" class="navBtn">Archives</a>
+            <a onclick="navOff()" href="#cContact" class="navBtn">Contact</a>
+        </div>   
+    </div>
+    <section id="cHome" class="landingPage">
+        <h1>FARCRY 2</h1>
+        <div class="subContainer">
+            <p>Its all about farcry 2</p>
+            <button class="downloadGame">Download Game</button>
+        </div>
+        <img class="bgland" src="res/images/farcryCharcterArt.png" alt="">
+    </section>
+    <section class="rFirst bgColor0">
+        <div class="readContainer">
+            <h1>Read me</h1>
+            <p><span>This</span> website was created to support Far Cry 2's online multiplayer mode. 
+            <br>Its main purpose is to make it easy for everyone to get a multiplayer patching tool, needed in order to join online sessions, as well as to provide players with information on how to join servers that host custom maps. 
+            <br><br>
+            If you need help, have questions, would like to share your thoughts.</p>
+        </div>
+    </section>
+    <section id="cMpPatch" class="rFirst bgColor1">
+        <div class="readContainer">
+            <img class="ak47" src="res/images/ak47.png" alt="">
+            <h1>multiplayer patch</h1>
+            <p><span>U</span>sing this tool will enable anyone, once again, to host and play in online matches, giving a chance for a revival the games well deserves. 
+                For Intructions & download Click on "Read More".
+            </p>
+            
+            <p>The FC2MPPatcher is a small patching tool that fixes Far Cry 2's broken online multiplayer mode by correcting software issues the game has in newer Windows API. Most people need to use this tool to be able to join and host online sessions.<br><br> Additionally, it also fix hosting issues over virtual private networks in Windows 10. You can download the patcher from here as well as source code from GitHub. You can also read instructions for using the tool further down on this page.</p>
+            <div class="btnContainer">
+                <a class="roundedContainer" href="">Instruction</a>
+                <a class="roundedContainer" href="">Source Code</a>
+                <a class="roundedContainer" href="">Download</a>
+            </div>
+            <div><br></div>
+            <h2 class="subHead">Current Ver</h2>
+            <p class="specialP">0.1.8</p>
+            <div><p><br></p></div>
+            <h2 class="subHead">Credits</h2>
+            <p class="specialP">Halvors & Zenoy</p>
+            <div><p><br></p></div>
+            <h2 class="subHead topSpacing">Note</h2>
+            <p>Before you start, make sure that the game, the map editor or any dedicated servers are not running, as it would prevent the patcher from modifying game files and the patching would fail.
+                <br><br>
+                The patcher is only compatible with the latest version (1.03) of the game. If you installed the game using a different source and you're unsure about its version number, you can find it in the upper left corner in the main menu.
+            </p>
+        
+        </div>
+        
+    </section>
+    <section id="cFixes" class="rFirst bgColor2">
+        <div class="readContainer">
+            <img class="m16a4" src="res/images/m16a4.png" alt="">
+            <h1>FIXES</h1>
+            <div><br></div>
+            <h2 class="subHead">Map Download Fix</h2>
+            <p>Are you facing Download Failed Error? Well here is the fix for you.
+                Download the <span>winhttp.dll</span> from here. Paste the file into the <span>Farcry2's Bin folder.</span>
+                For more info check the video.
+            </p>
+            <div class="btnContainer">
+                <a class="roundedContainer" href="">Video Guide</a>
+                <a class="roundedContainer" href="">Download winhttp.dll</a>
+            </div>
+
+            <div><br><br></div>
+            <h2 class="subHead">Find matches with players</h2>
+            <p>Currently, there are no ongoing matches all day long, but it's worth to check if there are players at any time. 
+                <br>If you want to play and all the servers are empty, it is also worth to wait in a server alone for some time, as someone may join after a while when they see a server with a player and after that more can follow. 
+                The most active time currently is Europe evenings.
+                <br><br>
+                But if your game doesn't showing any server, then fix that by following this video .
+            </p>
+            <div class="btnContainer">
+                <a class="roundedContainer" href="">Video Guide</a>
+            </div>
+        </div>
+    </section>
+    <section id="cArchives" class="rFirst bgColor6">
+        <div class="readContainer">
+            <h1>Archives</h1>
+            <div><br></div>
+            <h2 class="subHead" style="text-align: center;">Map Packs</h2>
+        </div>
+        <div class="smallCardContainer">
+            <a href="" style="text-decoration: none;">
+                <div class="scard">
+                    <h1 class="sCardHead">SonWars<br> Map Pack</h1>
+                </div>
+            </a>
+
+            <a href="" style="text-decoration: none;">
+                <div class="scard">
+                    <h1 class="sCardHead">G U U N<br> Map Pack</h1>
+                </div>
+            </a>
+
+            <a href="" style="text-decoration: none;">
+                <div class="scard">
+                    <h1 class="sCardHead">S a i l en<br> Map Pack</h1>
+                </div>
+            </a>
+        </div>
+        <div class="readContainer">
+            <br><br><br><br>
+            <h2 class="subHead" style="text-align: center;">Mods</h2>
+        </div>
+        <div class="smallCardContainer">
+            <a href="" style="text-decoration: none;">
+                <div class="scard">
+                    <h1 class="sCardHead">Realistic<br> Re shade</h1>
+                </div>
+            </a>
+            <a href="" style="text-decoration: none;">
+                <div class="scard">
+                    <h1 class="sCardHead">Real Africa<br> Sweet Fx</h1>
+                </div>
+            </a>
+            <a href="" style="text-decoration: none;">
+                <div class="scard">
+                    <h1 class="sCardHead">New <br>Dunia Mod</h1>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="cContact" class="connect bgColor3">
+        <div class="readContainer">
+            <img class="discord" src="res/images/icons8-discord.svg" alt="">
+            <h1>Our Community</h1>
+            <div><br><br><br><br></div>
+        </div>
+
+        <div class="cardSection bgColor3">
+            <div class="card">
+                <div class="cardImage">
+                    <img src="res/images/icons8-discord.svg" alt="Photo" class="cardImage" style="fill: aliceblue;">
+                </div>
+                <div class="desc">
+                    <h1>FarCry 2 Community</h1>
+                    <p>A Far Cry 2 Discord server with hundreds of members.</p>
+                </div>
+                <div class="buttonLayout">
+                    <a href="" class="cardBtn">Join Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardImage">
+                    <img src="res/images/icons8-discord.svg" alt="Photo" class="cardImage" style="fill: aliceblue;">
+                </div>
+                <div class="desc">
+                    <h1>FarCry 2 Multiplayer</h1>
+                    <p>Another Discord server to support the multiplayer.</p>
+                </div>
+                <div class="buttonLayout">
+                    <a href="" class="cardBtn">Join Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cardImage">
+                    <img src="res/images/icons8-discord.svg" alt="Photo" class="cardImage" style="fill: aliceblue;">
+                </div>
+                <div class="desc">
+                    <h1>Multiplayer Patcher Support</h1>
+                    <p>Discord support group for multiplayer patcher</p>
+                </div>
+                <div class="buttonLayout">
+                    <a href="" class="cardBtn">Join Now</a>
+                </div>
+            </div>
+            <div><br></div>
+        </div>
+    </section>
+    <section id="cLive" class="connect bgColor4">
+        <div class="readContainer">
+            <img src="res/images/youtube-brands.svg" alt="" class="youtube">
+            <h1>Live stream</h1>
+            <div><br></div>
+            <p>Some of the top players continues their live streams on big matches.
+                <br>Here are some of the channels.
+            </p>
+        </div>
+        <div><br><br></div>
+        <div><br></div>
+        <div class="circleCardContainer">
+            <div class="circleCard">
+                <div class="logo">
+                    <img src="res/images/youtube-brands.svg" alt="">
+                </div>
+                <h1>USER26</h1>
+            </div>
+            <div class="circleCard">
+                <div class="logo">
+                    <img src="res/images/youtube-brands.svg" alt="">
+                </div>
+                <h1>MOF1</h1>
+            </div>
+            <div class="circleCard">
+                <div class="logo">
+                    <img src="res/images/youtube-brands.svg" alt="">
+                </div>
+                <h1>JIO4G</h1>
+            </div>
+        </div>
+        <div><br><br></div>
+    </section>
+    <section class="connect bgColor5">
+        <div class="readContainer">
+            <img src="res/images/people.png" alt="" class="people">
+            <h1>About me</h1>
+            <div><br></div>
+            <p class="specialP2">I am sourav gain also known as <span><b>epicX</b></span>.
+                <br>A 21years old boy who has very passionate<br> about gaming and programming.
+                <br>For more info check my site. 
+            </p>
+            <div class="btnContainer">
+                <a class="roundedContainer" href="">Visit my site</a>
+            </div>
+        </div>
+        <div><br><br></div>
+        
+    </section>
+</body>
+</html>
+<!--<a target="_blank" href="https://icons8.com/icons/set/discord-logo">Discord icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
