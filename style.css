@@ -408,7 +408,7 @@ body {
   width: 20vh;
   opacity: 10%;
   right: 5%;
-  bottom: -10%;
+  bottom: 10%;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
 }
@@ -522,7 +522,7 @@ body {
   border-radius: 50px;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: .5rem;
+  padding-top: .6rem;
   padding-bottom: .5rem;
   margin-right: .5rem;
   font-family: arcaMajora;
